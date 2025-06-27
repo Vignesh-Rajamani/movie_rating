@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Add New Movie</h2>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        {{ form.title.label }}
+        {{ form.title(class="form-control") }}
+    </div>
+    <div class="form-group">
+        {{ form.year.label }}
+        {{ form.year(class="form-control") }}
+    </div>
+    <div class="form-group">
+        {{ form.genre.label }}
+        {{ form.genre(class="form-control") }}
+    </div>
+    <div class="form-group">
+        {{ form.director.label }}
+        {{ form.director(class="form-control") }}
+    </div>
+    <div class="form-group">
+        {{ form.description.label }}
+        {{ form.description(class="form-control", rows=5) }}
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Add Movie</button>
+</form>
+{% endblock %}
